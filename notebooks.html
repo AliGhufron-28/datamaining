@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Diskritisasi (Tugas 2)" href="notebooks2.html" />
@@ -345,7 +347,7 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="mengukur-jarak-disimilarity-tugas-1">
 <h1>Mengukur Jarak Disimilarity (Tugas 1)<a class="headerlink" href="#mengukur-jarak-disimilarity-tugas-1" title="Permalink to this headline">#</a></h1>
 <p><strong>DATA MINING</strong></p>
-<p>**# Pengertian Data mining ***</p>
+<p><strong># Pengertian Data mining</strong></p>
 <p>Data mining yaitu suatu alat dan aplikasi menggunakan analisis statistik pada data dengan jumlah yang besar dan cepat dimana Data minig ini melakukan suatu proses ekstraksi atau penggalian data dan informasi yang besar dan belum diketahui sebelumnya</p>
 <p>Data mining menggambarkan sebuah pengumpulan teknik-teknik dengan tujuan untuk menemukan pola-pola yang tidak diketahui pada data yang telah dikumpulkan dimana data mining ini melakukan sebuah proses percarian secara otomatis informasi yang berguna dalam tempat penyimpanan data berukuran besar dan teknik dalam data mining digunakan untuk memeriksa basis data berukuran besar sebagai cara untuk menemukan pola yang baru dan berguna.</p>
 <p><strong># Fungsi Data Mining</strong></p>
@@ -387,7 +389,8 @@ Contoh : Size = {small, medium, large}, kelas, pangkat</p></li>
 <li><p>Numerik<br />
 Yaitu data memiliki kuantitas (integer atau nilai real), data tersebut terdiri dari 2 bentuk yaitu :</p></li>
 </ul>
-<ul class="simple">
+<blockquote>
+<div><ul class="simple">
 <li><p>Interval-Scaled</p></li>
 </ul>
 <blockquote>
@@ -409,8 +412,9 @@ Contoh : Panjang, berat badan, dll</p></li>
 Misal : panjang jalan A adalah 2 kali dari panjang jalan B</p></li>
 </ul>
 </div></blockquote>
-<p>TUGAS<br />
-Carilah data yang bertipe numerik ( data klassifikasi (ambil data dari kaggle atau github))</p>
+</div></blockquote>
+<p><strong>TUGAS</strong></p>
+<p>Carilah data yang bertipe numerik ( data klassifikasi (ambil data dari kaggle atau github))</p>
 <ol class="simple">
 <li><p>Lakukan proses diskritisasi dengan equal width dan equal frequency</p></li>
 <li><p>Lakukan proses diskritisasi dengan basis entropy</p></li>
@@ -422,6 +426,8 @@ Carilah data yang bertipe numerik ( data klassifikasi (ambil data dari kaggle at
 yaitu sebuah library yang digunakan untuk menganalisis data dimana lebih tepatnya digunakan untuk mengatur tata letak data sehingga mudah dicari secara intuitif</p></li>
 <li><p>numpy<br />
 yaitu library yang digunakan untuk membuat objek kelas array tunggal dan multidimensi sehingga fungsi ini menudahkan kita dalam menangani data yang terdiri dari array.</p></li>
+<li><p>math<br />
+yaitu untuk melakukan perhitungan secara matematika dan mendefinisikan fungsi matematika secara umum.</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -443,7 +449,7 @@ yaitu library yang digunakan untuk membuat objek kelas array tunggal dan multidi
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-877822d9-2b0a-4fbd-8d02-15c0496fe5d0">
+  <div id="df-3fae91e4-bd05-4fb5-812f-f9cf782067fe">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -599,7 +605,7 @@ yaitu library yang digunakan untuk membuat objek kelas array tunggal dan multidi
 </table>
 <p>924 rows × 8 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-877822d9-2b0a-4fbd-8d02-15c0496fe5d0')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-3fae91e4-bd05-4fb5-812f-f9cf782067fe')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -650,12 +656,12 @@ yaitu library yang digunakan untuk membuat objek kelas array tunggal dan multidi
 
       <script>
         const buttonEl =
-          document.querySelector('#df-877822d9-2b0a-4fbd-8d02-15c0496fe5d0 button.colab-df-convert');
+          document.querySelector('#df-3fae91e4-bd05-4fb5-812f-f9cf782067fe button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-877822d9-2b0a-4fbd-8d02-15c0496fe5d0');
+          const element = document.querySelector('#df-3fae91e4-bd05-4fb5-812f-f9cf782067fe');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -676,12 +682,16 @@ yaitu library yang digunakan untuk membuat objek kelas array tunggal dan multidi
   </div>
 </div></div>
 </div>
-<p><strong>Menentukan atribut nominal yaitu di temukan labelnya yaitu :</strong></p>
-<ul class="simple">
-<li><p>Address</p></li>
-<li><p>Zip</p></li>
-</ul>
-<p>Kemudian di lakukan perhitungan jaraknya</p>
+<p><strong>Menghitung Data Nominal</strong></p>
+<ol class="simple">
+<li><p>Mencari data dari label atau class yang bertipe data nominal yaitu :<br />
+Address dan Zip</p></li>
+<li><p>Melakukan perhitungan <br />
+Rumus perhitungan nominal : <br />
+$<span class="math notranslate nohighlight">\( d(i,j)=\frac{p - m}p \)</span>$
+p = total label/ class nominal<br />
+m = banyaknya data</p></li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Proximity Measure for Nominal Attributes</span>
@@ -712,8 +722,14 @@ yaitu library yang digunakan untuk membuat objek kelas array tunggal dan multidi
 </div>
 </div>
 </div>
-<p>Menghitung Data yang numerik<br />
-yaitu terdiri data</p>
+<p><strong>Menghitung Data Numerik</strong>\</p>
+<ol class="simple">
+<li><p>Mencari data dengan label atau class yang bertipe numerik yaitu : <br />
+Price, Area, Room, Lon, dan Lat\</p></li>
+<li><p>Setelah itu melakukan perhitungan<br />
+Rumus perhitungan numerik:
+$<span class="math notranslate nohighlight">\( d(i,j) = \sqrt(|{x_{i1} - x_{j1}}|^2 + |{x_{i2} - x_{j2}}|^2 + ... + |{x_{ip} - x_{jp}}|^2) \)</span>$</p></li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Distance on Numeric Data: Minkowski Distance</span>
@@ -760,7 +776,8 @@ yaitu terdiri data</p>
 </div>
 </div>
 </div>
-<p>Disimilarity</p>
+<p><strong>Disimilarity</strong></p>
+<p>Menghitung jarak disimilarity dari dataset dengan menghitung data dari nominal kemudian di jumlah dengan data numerik dengan memasukan data yang sudah di tentukan di soal</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Jarak d(1,2)</span>
