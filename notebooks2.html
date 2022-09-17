@@ -403,21 +403,41 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="diskritisasi-tugas-2">
 <h1>Diskritisasi (Tugas 2)<a class="headerlink" href="#diskritisasi-tugas-2" title="Permalink to this headline">#</a></h1>
+<p><strong>DISKRITISASI</strong></p>
+<p><strong># Pengertian diskritisasi</strong></p>
+<p>Diskritisasi atau binning suatu teknik yang digunakan digunakan untuk mengubah atribut numerik menjadi atribut kategorikal. Perubahan tersebut dilakukan dengan mengkategorikan atribut numerik menjadi beberapa tingkatan atribut kategorikal, dan juga mengubah tipe data yang  digunakan untuk mendapatkan perspektif baru dari data sebelumnya. Sehingga, data tersebut dapat dianalisis dengan metode lain</p>
+<p>Attribute kategorikal sendiri yaitu data yang merepresentasikan suatu karakteristik tertentu, dan biasanya tidak dapat diukur. Contohnya data dengan atribut kategorikal antara lain data Gender, Jenis Mobil, dan lain lain.</p>
+<p><strong># Diskritisasi di bagi menjadi 2</strong></p>
 <ol class="simple">
-<li><p>mencari nilai equel width</p></li>
-<li><p>mencari nilai equel frekuensi</p></li>
-<li><p>entropy</p></li>
+<li><p><strong>Equal-width intervals</strong><br />
+yaitu diskritisasi yang membagi data numerik menjadi beberapa kelompok dengan lebar kelompok yang kurang lebih sama besar atau membagi kelompok berdasarkan range interval antar kelompok yang sama.</p></li>
+<li><p><strong>Equal-frequency intervals</strong> <br />
+yaitu diskritisasi yang membagi data numerik menjadi beberapa kelompok dengan jumlah anggota yang kurang lebih sama besar atau membagi kelompok menjadi kelompok dengan jumlah anggota yang kurang lebih sama besar.</p></li>
+</ol>
+<p><strong>TUGAS 2</strong></p>
+<p>Carilah data yang bertipe numerik ( data klassifikasi )</p>
+<ol class="simple">
+<li><p>Lakukan proses diskritisasi dengan equal width dan equal frequency</p></li>
+<li><p>Lakukan proses diskritisasi dengan basis entropy</p></li>
 </ol>
 <section id="equel-width">
 <h2>Equel Width<a class="headerlink" href="#equel-width" title="Permalink to this headline">#</a></h2>
-<p>rumus
+<p>Rumus :
 $<span class="math notranslate nohighlight">\( w=\frac{x_{min}-x_{max}}k \)</span>$</p>
 <div class="math notranslate nohighlight">
 \[v_i=x_{min}+i*w\]</div>
 <p>dimana i = 1,2,3,..k</p>
+<p>IMPORT LIBRARY PYTHON YANG DI BUTUHKAN</p>
+<ul class="simple">
+<li><p>Pandas<br />
+yaitu sebuah library yang digunakan untuk menganalisis data dimana lebih tepatnya digunakan untuk mengatur tata letak data sehingga mudah dicari secara intuitif</p></li>
+<li><p>numpy<br />
+yaitu library yang digunakan untuk membuat objek kelas array tunggal dan multidimensi sehingga fungsi ini menudahkan kita dalam menangani data yang terdiri dari array.</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Library</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
@@ -433,7 +453,7 @@ $<span class="math notranslate nohighlight">\( w=\frac{x_{min}-x_{max}}k \)</spa
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-d5cdd98e-aee0-452e-920b-07252347fef5">
+  <div id="df-d24df6b6-142c-4981-8505-a877a2c48a1e">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -553,7 +573,7 @@ $<span class="math notranslate nohighlight">\( w=\frac{x_{min}-x_{max}}k \)</spa
 </table>
 <p>150 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-d5cdd98e-aee0-452e-920b-07252347fef5')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-d24df6b6-142c-4981-8505-a877a2c48a1e')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -604,12 +624,12 @@ $<span class="math notranslate nohighlight">\( w=\frac{x_{min}-x_{max}}k \)</spa
 
       <script>
         const buttonEl =
-          document.querySelector('#df-d5cdd98e-aee0-452e-920b-07252347fef5 button.colab-df-convert');
+          document.querySelector('#df-d24df6b6-142c-4981-8505-a877a2c48a1e button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-d5cdd98e-aee0-452e-920b-07252347fef5');
+          const element = document.querySelector('#df-d24df6b6-142c-4981-8505-a877a2c48a1e');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -633,7 +653,6 @@ $<span class="math notranslate nohighlight">\( w=\frac{x_{min}-x_{max}}k \)</spa
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># CONSTAN SERIES</span>
-
 <span class="n">DATA_SEPAL_LENGTH</span> <span class="o">=</span> <span class="n">dt_iris</span><span class="p">[</span><span class="s2">&quot;sepal.length&quot;</span><span class="p">]</span>
 <span class="n">DATA_SEPAL_WIDTH</span> <span class="o">=</span> <span class="n">dt_iris</span><span class="p">[</span><span class="s2">&quot;sepal.width&quot;</span><span class="p">]</span>
 <span class="n">DATA_PETAL_LENGTH</span> <span class="o">=</span> <span class="n">dt_iris</span><span class="p">[</span><span class="s2">&quot;petal.length&quot;</span><span class="p">]</span>
@@ -644,7 +663,7 @@ $<span class="math notranslate nohighlight">\( w=\frac{x_{min}-x_{max}}k \)</spa
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># fungsi untuk eksekusi secara bersamaan</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># fungsi untuk diskritisasi equel-width dengan method cut</span>
 <span class="k">def</span> <span class="nf">cut</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
     <span class="n">intervals</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">dt_iris</span><span class="p">[</span><span class="n">col</span><span class="p">],</span> <span class="n">k</span><span class="p">)</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
     <span class="k">return</span> <span class="p">[[</span><span class="n">interval</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">interval</span><span class="o">.</span><span class="n">right</span><span class="p">]</span> <span class="k">for</span> <span class="n">interval</span> <span class="ow">in</span> <span class="n">intervals</span><span class="p">]</span>
@@ -719,7 +738,7 @@ interval petal.width  : [[0.9, 1.7], [0.0976, 0.9], [1.7, 2.5]]
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-879b2fa1-6e7a-436a-865b-f240cd0e4530">
+  <div id="df-d634c0f1-97c3-4638-96f9-9a4ede9b0b17">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -839,7 +858,7 @@ interval petal.width  : [[0.9, 1.7], [0.0976, 0.9], [1.7, 2.5]]
 </table>
 <p>150 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-879b2fa1-6e7a-436a-865b-f240cd0e4530')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-d634c0f1-97c3-4638-96f9-9a4ede9b0b17')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -890,12 +909,12 @@ interval petal.width  : [[0.9, 1.7], [0.0976, 0.9], [1.7, 2.5]]
 
       <script>
         const buttonEl =
-          document.querySelector('#df-879b2fa1-6e7a-436a-865b-f240cd0e4530 button.colab-df-convert');
+          document.querySelector('#df-d634c0f1-97c3-4638-96f9-9a4ede9b0b17 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-879b2fa1-6e7a-436a-865b-f240cd0e4530');
+          const element = document.querySelector('#df-d634c0f1-97c3-4638-96f9-9a4ede9b0b17');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -921,7 +940,8 @@ interval petal.width  : [[0.9, 1.7], [0.0976, 0.9], [1.7, 2.5]]
 <h2>Equel Frequensy<a class="headerlink" href="#equel-frequensy" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Library</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
@@ -937,7 +957,7 @@ interval petal.width  : [[0.9, 1.7], [0.0976, 0.9], [1.7, 2.5]]
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-0e9ab1d4-32f8-46e8-923e-e482a0f37e6e">
+  <div id="df-cc538b02-acb9-47f9-acf0-aa6164525a44">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1057,7 +1077,7 @@ interval petal.width  : [[0.9, 1.7], [0.0976, 0.9], [1.7, 2.5]]
 </table>
 <p>150 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-0e9ab1d4-32f8-46e8-923e-e482a0f37e6e')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-cc538b02-acb9-47f9-acf0-aa6164525a44')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1108,12 +1128,12 @@ interval petal.width  : [[0.9, 1.7], [0.0976, 0.9], [1.7, 2.5]]
 
       <script>
         const buttonEl =
-          document.querySelector('#df-0e9ab1d4-32f8-46e8-923e-e482a0f37e6e button.colab-df-convert');
+          document.querySelector('#df-cc538b02-acb9-47f9-acf0-aa6164525a44 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-0e9ab1d4-32f8-46e8-923e-e482a0f37e6e');
+          const element = document.querySelector('#df-cc538b02-acb9-47f9-acf0-aa6164525a44');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1147,7 +1167,8 @@ interval petal.width  : [[0.9, 1.7], [0.0976, 0.9], [1.7, 2.5]]
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">qcut</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># fungsi untuk diskritisasi equel-frequency dengan method qcut</span>
+<span class="k">def</span> <span class="nf">qcut</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
     <span class="n">intervals</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">qcut</span><span class="p">(</span><span class="n">dt_iris</span><span class="p">[</span><span class="n">col</span><span class="p">],</span> <span class="n">k</span><span class="p">)</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
     <span class="k">return</span> <span class="p">[[</span><span class="n">interval</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">interval</span><span class="o">.</span><span class="n">right</span><span class="p">]</span> <span class="k">for</span> <span class="n">interval</span> <span class="ow">in</span> <span class="n">intervals</span><span class="p">]</span>
 </pre></div>
@@ -1221,7 +1242,7 @@ interval petal.width  : [[0.867, 1.6], [0.099, 0.867], [1.6, 2.5]]
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-ab25abd9-cebb-4456-88e6-84f25855b7ff">
+  <div id="df-187a0e64-b9f4-4c03-82bf-32fc1d5ec590">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1341,7 +1362,7 @@ interval petal.width  : [[0.867, 1.6], [0.099, 0.867], [1.6, 2.5]]
 </table>
 <p>150 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-ab25abd9-cebb-4456-88e6-84f25855b7ff')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-187a0e64-b9f4-4c03-82bf-32fc1d5ec590')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1392,12 +1413,12 @@ interval petal.width  : [[0.867, 1.6], [0.099, 0.867], [1.6, 2.5]]
 
       <script>
         const buttonEl =
-          document.querySelector('#df-ab25abd9-cebb-4456-88e6-84f25855b7ff button.colab-df-convert');
+          document.querySelector('#df-187a0e64-b9f4-4c03-82bf-32fc1d5ec590 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-ab25abd9-cebb-4456-88e6-84f25855b7ff');
+          const element = document.querySelector('#df-187a0e64-b9f4-4c03-82bf-32fc1d5ec590');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1440,7 +1461,7 @@ interval petal.width  : [[0.867, 1.6], [0.099, 0.867], [1.6, 2.5]]
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-2f25d718-b8e8-40b2-894f-d0d9d30f3d2a">
+  <div id="df-6043e9d9-4975-400c-a2d8-1c6db688702d">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1560,7 +1581,7 @@ interval petal.width  : [[0.867, 1.6], [0.099, 0.867], [1.6, 2.5]]
 </table>
 <p>150 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-2f25d718-b8e8-40b2-894f-d0d9d30f3d2a')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-6043e9d9-4975-400c-a2d8-1c6db688702d')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1611,12 +1632,12 @@ interval petal.width  : [[0.867, 1.6], [0.099, 0.867], [1.6, 2.5]]
 
       <script>
         const buttonEl =
-          document.querySelector('#df-2f25d718-b8e8-40b2-894f-d0d9d30f3d2a button.colab-df-convert');
+          document.querySelector('#df-6043e9d9-4975-400c-a2d8-1c6db688702d button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-2f25d718-b8e8-40b2-894f-d0d9d30f3d2a');
+          const element = document.querySelector('#df-6043e9d9-4975-400c-a2d8-1c6db688702d');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1646,7 +1667,7 @@ interval petal.width  : [[0.867, 1.6], [0.099, 0.867], [1.6, 2.5]]
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-d889dc8d-d0b9-472f-a415-1ee1befc4ad1">
+  <div id="df-7b9c03cb-1c49-4a6d-8709-a746de6a7978">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1705,7 +1726,7 @@ interval petal.width  : [[0.867, 1.6], [0.099, 0.867], [1.6, 2.5]]
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-d889dc8d-d0b9-472f-a415-1ee1befc4ad1')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-7b9c03cb-1c49-4a6d-8709-a746de6a7978')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1756,12 +1777,12 @@ interval petal.width  : [[0.867, 1.6], [0.099, 0.867], [1.6, 2.5]]
 
       <script>
         const buttonEl =
-          document.querySelector('#df-d889dc8d-d0b9-472f-a415-1ee1befc4ad1 button.colab-df-convert');
+          document.querySelector('#df-7b9c03cb-1c49-4a6d-8709-a746de6a7978 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-d889dc8d-d0b9-472f-a415-1ee1befc4ad1');
+          const element = document.querySelector('#df-7b9c03cb-1c49-4a6d-8709-a746de6a7978');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1849,6 +1870,8 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 </div>
 <p>Buat Fungsi entropy untuk mencari nilai entropy</p>
+<p>Rumus Entropy :
+$<span class="math notranslate nohighlight">\(𝐸ntropy(𝐷1)=-\displaystyle\sum_{i=1}^{m}p1\log2p1\)</span>$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">entropy</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
@@ -1860,6 +1883,8 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 </div>
 <p>Membuat fungsi info dan gain</p>
+<p>Rumus Info : <br />
+$<span class="math notranslate nohighlight">\(info (𝐷)=\frac{|𝐷1|}{|𝐷|}𝐸ntropy(𝐷1)+\frac{|𝐷2|}{|𝐷|}𝐸ntropy(𝐷2)\)</span>$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">info</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
@@ -1871,6 +1896,8 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 </div>
 <p>Fungsi gain untuk menghitung selsih antara entropy awal dengan yang baru</p>
+<p>Rumus gain :<br />
+$<span class="math notranslate nohighlight">\(Gain (𝐸new) = 𝐸initial - 𝛦new\)</span>$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">gain</span><span class="p">(</span><span class="n">Einitial</span><span class="p">,</span> <span class="n">Enew</span><span class="p">):</span>

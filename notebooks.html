@@ -369,7 +369,11 @@ Sehingga fungsi ini memudahkan dan menguntungkan bagi siapapun yang memerlukan p
 <ul class="simple">
 <li><p>Nominal<br />
 Yaitu data yang menyatakan kategori, keadaan atau nama suatu hal.<br />
-Contoh : nama, alamat, warna rambut, status, kodepos, nrp, dll.\</p></li>
+Contoh : nama, alamat, warna rambut, status, kodepos, nrp, dll.<br />
+Rumus Perhitungan :
+$<span class="math notranslate nohighlight">\( d(i,j)=\frac{p - m}p \)</span>$
+p = total label/ class nominal<br />
+m = banyaknya data</p></li>
 <li><p>Binary<br />
 Yaitu attribute nominal yang hanya memiliki 2 keadaan yaitu 0 dan 1.<br />
 data binary di bagi menjadi 2 yaitu :</p></li>
@@ -378,14 +382,19 @@ data binary di bagi menjadi 2 yaitu :</p></li>
 <li><p>Symetric Binary (data yang keduanya sama penting)<br />
 Contoh : jenis kelamin</p></li>
 <li><p>Asymetric Binary (data yang keduanya tidak sama penting)<br />
-Contoh : medical test (positive atau negative) dimana dinyatakan dengan 1 untuk menyatakan hal yang
-lebih penting ( positif HIV)</p></li>
+Contoh : medical test (positive atau negative) dimana dinyatakan dengan 1 untuk menyatakan hal yang lebih penting ( positif HIV)</p></li>
 </ul>
+<p>Rumus Perhitungan :
+$<span class="math notranslate nohighlight">\(d(i,j)=\frac{r + s}{q+r+s+t} \)</span>$</p>
 <ul class="simple">
 <li><p>Ordinal<br />
 Yaitu data yang memiliki arti secara berurutan, (ranking) tetapi tidak
 dinyatakan dengan besaran angka atau nilai.<br />
 Contoh : Size = {small, medium, large}, kelas, pangkat</p></li>
+</ul>
+<p>Rumus Perhitungan :
+$<span class="math notranslate nohighlight">\(Zif=\frac{rif-1}{Mf-1}\)</span>$</p>
+<ul class="simple">
 <li><p>Numerik<br />
 Yaitu data memiliki kuantitas (integer atau nilai real), data tersebut terdiri dari 2 bentuk yaitu :</p></li>
 </ul>
@@ -413,6 +422,8 @@ Misal : panjang jalan A adalah 2 kali dari panjang jalan B</p></li>
 </ul>
 </div></blockquote>
 </div></blockquote>
+<p>Rumus Perhitungan :
+$<span class="math notranslate nohighlight">\( d(i,j) = \sqrt(|{x_{i1} - x_{j1}}|^2 + |{x_{i2} - x_{j2}}|^2 ) \)</span>$</p>
 <p><strong>TUGAS</strong></p>
 <p>Carilah data yang bertipe numerik ( data klassifikasi (ambil data dari kaggle atau github))</p>
 <ol class="simple">
@@ -447,7 +458,7 @@ yaitu untuk melakukan perhitungan secara matematika dan mendefinisikan fungsi ma
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-a207209d-fc8f-492e-9bf5-4b9ca014f4a9">
+  <div id="df-36019ecb-1fe6-403f-a708-affae9dacd3c">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -603,7 +614,7 @@ yaitu untuk melakukan perhitungan secara matematika dan mendefinisikan fungsi ma
 </table>
 <p>924 rows × 8 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-a207209d-fc8f-492e-9bf5-4b9ca014f4a9')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-36019ecb-1fe6-403f-a708-affae9dacd3c')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -654,12 +665,12 @@ yaitu untuk melakukan perhitungan secara matematika dan mendefinisikan fungsi ma
 
       <script>
         const buttonEl =
-          document.querySelector('#df-a207209d-fc8f-492e-9bf5-4b9ca014f4a9 button.colab-df-convert');
+          document.querySelector('#df-36019ecb-1fe6-403f-a708-affae9dacd3c button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-a207209d-fc8f-492e-9bf5-4b9ca014f4a9');
+          const element = document.querySelector('#df-36019ecb-1fe6-403f-a708-affae9dacd3c');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -726,7 +737,7 @@ m = banyaknya data</p></li>
 Price, Area, Room, Lon, dan Lat\</p></li>
 <li><p>Setelah itu melakukan perhitungan<br />
 Rumus perhitungan numerik:
-$<span class="math notranslate nohighlight">\( d(i,j) = \sqrt(|{x_{i1} - x_{j1}}|^2 + |{x_{i2} - x_{j2}}|^2 + ... + |{x_{ip} - x_{jp}}|^2) \)</span>$</p></li>
+$<span class="math notranslate nohighlight">\( d(i,j) = \sqrt(|{x_{i1} - x_{j1}}|^2 + |{x_{i2} - x_{j2}}|^2 ) \)</span>$</p></li>
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
