@@ -358,23 +358,25 @@ Fungsi deskripsi dalam data mining adalah sebuah fungsi untuk memahami lebih jau
 Fungsi prediksi merupakan sebuah fungsi bagaimana sebuah proses nantinya akan menemukan pola tertentu dari suatu data. Pola-pola tersebut dapat diketahui dari berbagai variabel-variabel yang ada pada data. Ketika sudah menemukan pola, Maka pola yang didapat tersebut bisa digunakan untuk memprediksi variabel lain yang belum diketahui nilai ataupun jenisnya. Karena itulah fungsi satu ini dikatakan sebagai fungsi prediksi sama halnya dengan melakukan predictive analisis. Fungsi ini juga bisa digunakan untuk memprediksi sebuah variabel tertentu yang tidak ada dalam suatu data.<br />
 Sehingga fungsi ini memudahkan dan menguntungkan bagi siapapun yang memerlukan prediksi yang akurat untuk membuat hal penting tersebut menjadi lebih baik.</p></li>
 </ol>
-<p><strong># Mengenal dan Memahami Data</strong></p>
+<p><strong># Macam-Macam Data</strong></p>
 <ul class="simple">
-<li><p>Objek data dan macam-macam atribut</p></li>
-<li><p>Statistik diskriptif data</p></li>
-<li><p>Visualisasi data</p></li>
-<li><p>Mengukur kesamaan dan ketidaksamaan data</p></li>
+<li><p><strong>Data Terstruktur</strong><br />
+yaitu data yang bergantung pada model data dan yang dinyatakan dalam bentuk tabel dengan atribut} (kolom) dan baris. Data terstruktur mudah disimpan dalam database dalam bentuk tabel atau file excel (Ms Office), SQl (structure Query Language)sehingga mudah dilakukan query terhadap data tersebut. Tetapi realitanya banyak data yang ada dalam dalam bentuk data tidak terstruktur karena data dihasilkan oleh manusia dan mesin</p></li>
+<li><p><strong>Data Tidak Terstruktur</strong><br />
+yaitu data yang tidak mudah dimasukkan ke dalam model data karena isi/kontennya spesifik atau bervariasi. Salah satu contoh data tidak terstruktur adalah data email. Meskipun email berisi elemen terstruktur seperti pengirim, judul, dan isi teks, terlalu banyak variasi dari isi yang terkandung dalamnya diantaranya dialek bahasa yang dipakai dan sebagainya.</p></li>
 </ul>
-<p><strong># Macam-Macam Attribute Data</strong></p>
+<p><strong># Macam-Macam Attribute Data</strong><br />
+Attribut yaitu data yang mewakili karakteristik atau fitur dari objek data. Atribut bisa disebut juga dengan dimensi, fitur, dan variabel yang istilah itu sering digunakan literatur. Dalam literatur pembelajaran mesin cenderung menggunakan istilah fitur, sementara dalam bidang statistik lebih memilih menggunakan istilah variabel. Sekumpulan atribut yang digunakan untuk menggambarkan objek disebut disebut dengan vektor atribut atau vektor fitur, jenis atribut ditentukan oleh nilai-nilai pada atribut tersebut yang mungkin nominal, biner,atau ordinal, atau numerik.</p>
+<p><strong>Tipe Data Attribute</strong></p>
 <ul class="simple">
-<li><p>Nominal<br />
+<li><p><strong>Nominal</strong><br />
 Yaitu data yang menyatakan kategori, keadaan atau nama suatu hal.<br />
 Contoh : nama, alamat, warna rambut, status, kodepos, nrp, dll.<br />
-Rumus Perhitungan :
-$<span class="math notranslate nohighlight">\( d(i,j)=\frac{p - m}p \)</span>$
+Rumus Perhitungan :<br />
+$<span class="math notranslate nohighlight">\( d(i,j)=\frac{p - m}p \)</span>$<br />
 p = total label/ class nominal<br />
 m = banyaknya data</p></li>
-<li><p>Binary<br />
+<li><p><strong>Binary</strong><br />
 Yaitu attribute nominal yang hanya memiliki 2 keadaan yaitu 0 dan 1.<br />
 data binary di bagi menjadi 2 yaitu :</p></li>
 </ul>
@@ -384,18 +386,18 @@ Contoh : jenis kelamin</p></li>
 <li><p>Asymetric Binary (data yang keduanya tidak sama penting)<br />
 Contoh : medical test (positive atau negative) dimana dinyatakan dengan 1 untuk menyatakan hal yang lebih penting ( positif HIV)</p></li>
 </ul>
-<p>Rumus Perhitungan :
+<p>Rumus Perhitungan :<br />
 $<span class="math notranslate nohighlight">\(d(i,j)=\frac{r + s}{q+r+s+t} \)</span>$</p>
 <ul class="simple">
-<li><p>Ordinal<br />
+<li><p><strong>Ordinal</strong><br />
 Yaitu data yang memiliki arti secara berurutan, (ranking) tetapi tidak
 dinyatakan dengan besaran angka atau nilai.<br />
 Contoh : Size = {small, medium, large}, kelas, pangkat</p></li>
 </ul>
-<p>Rumus Perhitungan :
-$<span class="math notranslate nohighlight">\(Zif=\frac{rif-1}{Mf-1}\)</span>$</p>
+<p>Rumus Perhitungan :<br />
+$<span class="math notranslate nohighlight">\(Z_{if}=\frac{r_{if}-1}{M_f-1}\)</span>$</p>
 <ul class="simple">
-<li><p>Numerik<br />
+<li><p><strong>Numerik</strong><br />
 Yaitu data memiliki kuantitas (integer atau nilai real), data tersebut terdiri dari 2 bentuk yaitu :</p></li>
 </ul>
 <blockquote>
@@ -422,10 +424,55 @@ Misal : panjang jalan A adalah 2 kali dari panjang jalan B</p></li>
 </ul>
 </div></blockquote>
 </div></blockquote>
-<p>Rumus Perhitungan :
+<p>Rumus Perhitungan :<br />
 $<span class="math notranslate nohighlight">\( d(i,j) = \sqrt(|{x_{i1} - x_{j1}}|^2 + |{x_{i2} - x_{j2}}|^2 ) \)</span>$</p>
+<p><strong>Ada beberapa ukuran similaritas datau ukuran jarak yaitu :</strong>\</p>
+<ol class="simple">
+<li><p><strong>Minkowski Distance</strong><br />
+Kelompk Minkowski diantaranya adalah Euclidean distance dan Manhattan distance, yang menjadi kasus khusus dari Minkowski distance.<br />
+Rumus :<br />
+$<span class="math notranslate nohighlight">\(d_{min}=(sum_{i=1}^{n}|x_i-y_i|^{m})^{1/m},m\geq 1\)</span>$<br />
+m = bilangan riel positif<br />
+x_i dan y_i = dua vektor dalam runang dimensi<br />
+n = Implementasi ukuran jarak Minkowski pada model clustering data atribut dilakukan normalisasi untuk menghindari dominasi dari atribut yang memiliki skala data besar</p></li>
+<li><p><strong>Manhattan distance</strong><br />
+Manhattan distance digunakan untuk kasus khsusus dari jarak Minkowski distance pada m = 1. Seperti Minkowski Distance, Manhattan distance sensitif terhadap outlier. BIla ukuran ini digunakan dalam algoritma clustering , bentuk cluster adalah hyper-rectangular.<br />
+Rumus :<br />
+$<span class="math notranslate nohighlight">\(d_{man}=\sum_{i=1}^{n}|x_i-y_i|\)</span>$</p></li>
+<li><p><strong>Euclidean distance</strong><br />
+Euclidean distance digunkan untuk kasus khusus dari jarak Minkowski ketika m = 2, dan jarak ini adalah jarak yang paling terkenal yang digunakan untuk data numerik.</p></li>
+<li><p><strong>Average Distance</strong><br />
+yaitu rata rata jarak versi modikfikasi dari jarak Euclidian untuk memperbaiki hasil. Untuk dua titik x,y dalam ruang dimensi n.<br />
+Rumus :<br />
+$<span class="math notranslate nohighlight">\(d_{ave}=\Bigg(\frac{1}{n}\sum_{i=1}^{n}(x_i-y_i)^{2}\Bigg)^{1/2}\)</span>$</p></li>
+<li><p><strong>Weighted euclidean distance</strong><br />
+Jika berdasarkan tingkatan penting dari masing masing atribut ditentukan, maka Weighted Euclidean distance adalah modifikisasi lain dari jarak Euclidean distance yang dapat digunakan.<br />
+Rumus :<br />
+$<span class="math notranslate nohighlight">\(d_{we}=\Bigg(\sum_{i=1}^{n}w_i(x_i-y_i\Bigg)^{2})^{1/2}\)</span><span class="math notranslate nohighlight">\(\
+dimana \)</span>w_i$ adalah bobot yang diberikan pada atribut ke i.</p></li>
+<li><p><strong>Chord distance</strong><br />
+Chord distance yaitu salah satu ukuran jarak modifikasi Euclidean distance untuk mengatasi kekurangan dari Euclidean distance. Ini dapat dipecahkan juga dengan menggunakan skala pengukuran yang baik. Jarak ini dapat juga dihitung dari data yang tidak dinormalisasi.<br />
+Rumus :<br />
+$<span class="math notranslate nohighlight">\(d_{chord}=\Bigg(2-2\frac{\sum_{i=1}^{n}x_iy_i}{||x||_2||y||_2}\Bigg)^{1/2}\)</span><span class="math notranslate nohighlight">\(\
+diman \)</span>||x||_2<span class="math notranslate nohighlight">\( adalah \)</span>L^{2}-norn||x||<em>2 = \sqrt\sum</em>{i=1}^{n}x_i^{2}$</p></li>
+<li><p><strong>Mahalanobis distance</strong><br />
+Mahalanobis distance dapat digunakan untuk mengekstraksi hyperellipsoidal clusters dan dapat mengurangi distorsi yang disebabkan oleh korelasi linier antara fitur dengan menerapkan transformasi pemutihan ke data atau dengan menggunakan kuadrat Jarak mahalanobis.<br />
+Rumus :<br />
+$<span class="math notranslate nohighlight">\(d_{mah}=\sqrt(x-y)S^{-1}(x-y)^{T}\)</span>$<br />
+diman S adalah matrik covariance data</p></li>
+<li><p><strong>Cosine measure</strong><br />
+Ukuran Cosine similarity lebih banyak digunakan dalam similaritas dokumen.<br />
+Rumus :<br />
+$<span class="math notranslate nohighlight">\(Cosine(x,y)=\frac{\sum_{i=1}^{n}x_iy_i}{||x||_2||y||_2}\)</span><span class="math notranslate nohighlight">\(\
+dimana \)</span>||y||_2<span class="math notranslate nohighlight">\( adalah Euclidean norm dari vektor \)</span>y=(y_1,y_2,…,y_n)<span class="math notranslate nohighlight">\( didefinisikan dengan \)</span>||y||_2=\sqrt y_1^2 + y_2^2 + … + y_n^2$</p></li>
+<li><p><strong>Pearson correlation</strong><br />
+Pearson correlation banyak digunakan dalam data expresi gen. Ukuran similaritas ini menghitung similaritas antara duan bentuk pola expresi gen.<br />
+Rumus :<br />
+$<span class="math notranslate nohighlight">\(Pearson(x,y)=\frac{\sum_{i=1}^{n}(xᵢ-μₓ)(yᵢ-μ_y)}{\sqrt\sum_{i=1}^{n}(xᵢ-yᵢ)^{2}\sqrt\sum_{i=1}^{n}(xᵢ-yᵢ)^{2}}\)</span>$</p></li>
+</ol>
 <p><strong>TUGAS</strong></p>
-<p>Carilah data yang bertipe numerik ( data klassifikasi (ambil data dari kaggle atau github))</p>
+<p>Carilah data bisa ambil data dari kaggle atau github<br />
+kemudian hitung jarak disimilarity</p>
 <ol class="simple">
 <li><p>Ukur jarak d(1,2), d(1,3), d(1,4) dari data tersebut</p></li>
 </ol>
@@ -458,7 +505,7 @@ yaitu untuk melakukan perhitungan secara matematika dan mendefinisikan fungsi ma
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-36019ecb-1fe6-403f-a708-affae9dacd3c">
+  <div id="df-842efa01-3258-4ce0-8bdf-30d4ed6ed692">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -614,7 +661,7 @@ yaitu untuk melakukan perhitungan secara matematika dan mendefinisikan fungsi ma
 </table>
 <p>924 rows × 8 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-36019ecb-1fe6-403f-a708-affae9dacd3c')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-842efa01-3258-4ce0-8bdf-30d4ed6ed692')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -665,12 +712,12 @@ yaitu untuk melakukan perhitungan secara matematika dan mendefinisikan fungsi ma
 
       <script>
         const buttonEl =
-          document.querySelector('#df-36019ecb-1fe6-403f-a708-affae9dacd3c button.colab-df-convert');
+          document.querySelector('#df-842efa01-3258-4ce0-8bdf-30d4ed6ed692 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-36019ecb-1fe6-403f-a708-affae9dacd3c');
+          const element = document.querySelector('#df-842efa01-3258-4ce0-8bdf-30d4ed6ed692');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -697,7 +744,7 @@ yaitu untuk melakukan perhitungan secara matematika dan mendefinisikan fungsi ma
 Address dan Zip</p></li>
 <li><p>Melakukan perhitungan <br />
 Rumus perhitungan nominal : <br />
-$<span class="math notranslate nohighlight">\( d(i,j)=\frac{p - m}p \)</span>$
+$<span class="math notranslate nohighlight">\( d(i,j)=\frac{p - m}p \)</span>$<br />
 p = total label/ class nominal<br />
 m = banyaknya data</p></li>
 </ol>
@@ -736,9 +783,14 @@ m = banyaknya data</p></li>
 <li><p>Mencari data dengan label atau class yang bertipe numerik yaitu : <br />
 Price, Area, Room, Lon, dan Lat\</p></li>
 <li><p>Setelah itu melakukan perhitungan<br />
-Rumus perhitungan numerik:
+Rumus perhitungan numerik :<br />
 $<span class="math notranslate nohighlight">\( d(i,j) = \sqrt(|{x_{i1} - x_{j1}}|^2 + |{x_{i2} - x_{j2}}|^2 ) \)</span>$</p></li>
 </ol>
+<p>Rumus Minkowski Distance:<br />
+$<span class="math notranslate nohighlight">\(d_{min}=(sum_{i=1}^{n}|x_i-y_i|^{m})^{1/m},m\geq 1\)</span>$<br />
+m = bilangan riel positif<br />
+x_i dan y_i = dua vektor dalam runang dimensi<br />
+n = Implementasi ukuran jarak Minkowski pada model clustering data atribut dilakukan normalisasi untuk menghindari dominasi dari atribut yang memiliki skala data besar</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Distance on Numeric Data: Minkowski Distance</span>
