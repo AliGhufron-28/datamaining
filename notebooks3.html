@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Implementasi K-NN pada datase iris ( Tugas 3 ) &#8212; M. Ali Ghufron</title>
+    <title>Implementasi K-NN pada dataset iris ( Tugas 3 ) &#8212; M. Ali Ghufron</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="Diskritisasi (Tugas 2)" href="notebooks2.html" />
@@ -130,7 +132,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Implementasi K-NN pada datase iris ( Tugas 3 )
+   Implementasi K-NN pada dataset iris ( Tugas 3 )
   </a>
  </li>
 </ul>
@@ -329,7 +331,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Implementasi K-NN pada datase iris ( Tugas 3 )</h1>
+                <h1>Implementasi K-NN pada dataset iris ( Tugas 3 )</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -341,8 +343,30 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="implementasi-k-nn-pada-datase-iris-tugas-3">
-<h1>Implementasi K-NN pada datase iris ( Tugas 3 )<a class="headerlink" href="#implementasi-k-nn-pada-datase-iris-tugas-3" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="implementasi-k-nn-pada-dataset-iris-tugas-3">
+<h1>Implementasi K-NN pada dataset iris ( Tugas 3 )<a class="headerlink" href="#implementasi-k-nn-pada-dataset-iris-tugas-3" title="Permalink to this headline">#</a></h1>
+<p><strong># Pengertian K-NN</strong></p>
+<p>K-Nearest Neighbor merupakan salah satu metode untuk mengambil keputusan menggunakan pembelajaran terawasi dimana hasil dari data masukan yang baru diklasifikasi berdasarkan terdekat dalam data nilai.</p>
+<p>Algoritma K-Nearest Neighbor (KNN) adalah algoritma yang berfungsi untuk melakukan klasifikasi suatu data berdasarkan data pembelajaran (train data sets), yang diambil dari k tetangga terdekatnya (nearest neighbors). Dengan k merupakan banyaknya tetangga terdekat.</p>
+<p>KNN merupakan algoritma supervised learning dimana hasil dari query instance yang baru diklasifikan berdasarkan mayoritas dari kategori pada algoritma KNN. Dimana kelas yang paling banyak muncul yang nantinya akan menjadi kelas hasil dari klasifikasi.</p>
+<p><strong># Cara Kerja Algoritma K-Nearest Neighbors (KNN)</strong></p>
+<p>K-nearest neighbors melakukan klasifikasi dengan proyeksi data pembelajaran pada ruang berdimensi banyak. Ruang ini dibagi menjadi bagian-bagian yang merepresentasikan kriteria data pembelajaran. Setiap data pembelajaran direpresentasikan menjadi titik-titik c pada ruang dimensi banyak.</p>
+<p><strong>Tata Cara :</strong>\</p>
+<ol class="simple">
+<li><p>menentukan nilai k</p></li>
+<li><p>Menghitung jarak data uji dengan data latih</p></li>
+<li><p>Mengurutkan jarak dari kecil hingga besar</p></li>
+<li><p>Mengambil data sebanyak k terdekat</p></li>
+<li><p>Memilih kelas mayor</p></li>
+</ol>
+<p>Untuk menghitung jarak pada algoritma KNN jika dalam kasus terdapat lebih dari 2 independent variables, untuk menghitung jaraknya kita bisa gunakan rumus Euclidean Distance dan jika dalam kasus hanya terdapat 1 independent variables maka menggunakan rumus Mahattan Distance.</p>
+<ul class="simple">
+<li><p>Rumus Euclidean Distance<br />
+$<span class="math notranslate nohighlight">\(d=\sqrt\sum_{i=1}^{n}(y_i-x_i)^{2}\)</span><span class="math notranslate nohighlight">\(\
+\)</span><span class="math notranslate nohighlight">\(d=\sqrt(x_1-x_1)^{2}+(y_2-y_2)^{2}\)</span>$</p></li>
+<li><p>Rumus Mahattan Distance<br />
+$<span class="math notranslate nohighlight">\(d_{man}=\sum_{i=1}^{n}|x_i-y_i|\)</span>$</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
@@ -419,8 +443,8 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/notebooks3_3_0.png" src="_images/notebooks3_3_0.png" />
-<img alt="_images/notebooks3_3_1.png" src="_images/notebooks3_3_1.png" />
+<img alt="_images/notebooks3_4_0.png" src="_images/notebooks3_4_0.png" />
+<img alt="_images/notebooks3_4_1.png" src="_images/notebooks3_4_1.png" />
 </div>
 </div>
 <div class="cell docutils container">

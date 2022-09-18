@@ -133,7 +133,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="notebooks3.html">
-   Implementasi K-NN pada datase iris ( Tugas 3 )
+   Implementasi K-NN pada dataset iris ( Tugas 3 )
   </a>
  </li>
 </ul>
@@ -440,7 +440,9 @@ Manhattan distance digunakan untuk kasus khsusus dari jarak Minkowski distance p
 Rumus :<br />
 $<span class="math notranslate nohighlight">\(d_{man}=\sum_{i=1}^{n}|x_i-y_i|\)</span>$</p></li>
 <li><p><strong>Euclidean distance</strong><br />
-Euclidean distance digunkan untuk kasus khusus dari jarak Minkowski ketika m = 2, dan jarak ini adalah jarak yang paling terkenal yang digunakan untuk data numerik.</p></li>
+Euclidean distance digunkan untuk kasus khusus dari jarak Minkowski ketika m = 2, dan jarak ini adalah jarak yang paling terkenal yang digunakan untuk data numerik.<br />
+Rumus :<br />
+$<span class="math notranslate nohighlight">\(d=\sqrt(x_2-x_1)^{2}(y_2-y_1)^{2}\)</span>$</p></li>
 <li><p><strong>Average Distance</strong><br />
 yaitu rata rata jarak versi modikfikasi dari jarak Euclidian untuk memperbaiki hasil. Untuk dua titik x,y dalam ruang dimensi n.<br />
 Rumus :<br />
@@ -505,7 +507,7 @@ yaitu untuk melakukan perhitungan secara matematika dan mendefinisikan fungsi ma
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-842efa01-3258-4ce0-8bdf-30d4ed6ed692">
+  <div id="df-7d6de5ee-af1e-424b-8339-9f81f150f6a2">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -661,7 +663,7 @@ yaitu untuk melakukan perhitungan secara matematika dan mendefinisikan fungsi ma
 </table>
 <p>924 rows × 8 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-842efa01-3258-4ce0-8bdf-30d4ed6ed692')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-7d6de5ee-af1e-424b-8339-9f81f150f6a2')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -712,12 +714,12 @@ yaitu untuk melakukan perhitungan secara matematika dan mendefinisikan fungsi ma
 
       <script>
         const buttonEl =
-          document.querySelector('#df-842efa01-3258-4ce0-8bdf-30d4ed6ed692 button.colab-df-convert');
+          document.querySelector('#df-7d6de5ee-af1e-424b-8339-9f81f150f6a2 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-842efa01-3258-4ce0-8bdf-30d4ed6ed692');
+          const element = document.querySelector('#df-7d6de5ee-af1e-424b-8339-9f81f150f6a2');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -820,6 +822,8 @@ n = Implementasi ukuran jarak Minkowski pada model clustering data atribut dilak
 </div>
 </div>
 </div>
+<p>Rumus Euclidean distance :<br />
+$<span class="math notranslate nohighlight">\(d=\sqrt(x_2-x_1)^{2}(y_2-y_1)^{2}\)</span>$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Euclidean distance</span>
