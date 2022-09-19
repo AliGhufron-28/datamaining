@@ -426,7 +426,9 @@ Misal : panjang jalan A adalah 2 kali dari panjang jalan B</p></li>
 </div></blockquote>
 <p>Rumus Perhitungan :<br />
 $<span class="math notranslate nohighlight">\( d(i,j) = \sqrt(|{x_{i1} - x_{j1}}|^2 + |{x_{i2} - x_{j2}}|^2 ) \)</span>$</p>
-<p><strong>Ada beberapa ukuran similaritas datau ukuran jarak yaitu :</strong>\</p>
+<p><strong># Dissimilarity</strong><br />
+Dissimilarity adalah pengukuran numerik untuk menunjukkan seberapa berbeda dua obyek data.<br />
+Metode yang digunakan untuk menghitung dissimilarity umumnya ada 2, yaitu Euclidean Distance (Jarak Euclidean) dan Minkowski Distance (Jarak Minkowski).</p>
 <ol class="simple">
 <li><p><strong>Minkowski Distance</strong><br />
 Kelompk Minkowski diantaranya adalah Euclidean distance dan Manhattan distance, yang menjadi kasus khusus dari Minkowski distance.<br />
@@ -435,42 +437,10 @@ $<span class="math notranslate nohighlight">\(d_{min}=(sum_{i=1}^{n}|x_i-y_i|^{m
 m = bilangan riel positif<br />
 x_i dan y_i = dua vektor dalam runang dimensi<br />
 n = Implementasi ukuran jarak Minkowski pada model clustering data atribut dilakukan normalisasi untuk menghindari dominasi dari atribut yang memiliki skala data besar</p></li>
-<li><p><strong>Manhattan distance</strong><br />
-Manhattan distance digunakan untuk kasus khsusus dari jarak Minkowski distance pada m = 1. Seperti Minkowski Distance, Manhattan distance sensitif terhadap outlier. BIla ukuran ini digunakan dalam algoritma clustering , bentuk cluster adalah hyper-rectangular.<br />
-Rumus :<br />
-$<span class="math notranslate nohighlight">\(d_{man}=\sum_{i=1}^{n}|x_i-y_i|\)</span>$</p></li>
 <li><p><strong>Euclidean distance</strong><br />
 Euclidean distance digunkan untuk kasus khusus dari jarak Minkowski ketika m = 2, dan jarak ini adalah jarak yang paling terkenal yang digunakan untuk data numerik.<br />
 Rumus :<br />
-$<span class="math notranslate nohighlight">\(d=\sqrt(x_2-x_1)^{2}(y_2-y_1)^{2}\)</span>$</p></li>
-<li><p><strong>Average Distance</strong><br />
-yaitu rata rata jarak versi modikfikasi dari jarak Euclidian untuk memperbaiki hasil. Untuk dua titik x,y dalam ruang dimensi n.<br />
-Rumus :<br />
-$<span class="math notranslate nohighlight">\(d_{ave}=\Bigg(\frac{1}{n}\sum_{i=1}^{n}(x_i-y_i)^{2}\Bigg)^{1/2}\)</span>$</p></li>
-<li><p><strong>Weighted euclidean distance</strong><br />
-Jika berdasarkan tingkatan penting dari masing masing atribut ditentukan, maka Weighted Euclidean distance adalah modifikisasi lain dari jarak Euclidean distance yang dapat digunakan.<br />
-Rumus :<br />
-$<span class="math notranslate nohighlight">\(d_{we}=\Bigg(\sum_{i=1}^{n}w_i(x_i-y_i\Bigg)^{2})^{1/2}\)</span><span class="math notranslate nohighlight">\(\
-dimana \)</span>w_i$ adalah bobot yang diberikan pada atribut ke i.</p></li>
-<li><p><strong>Chord distance</strong><br />
-Chord distance yaitu salah satu ukuran jarak modifikasi Euclidean distance untuk mengatasi kekurangan dari Euclidean distance. Ini dapat dipecahkan juga dengan menggunakan skala pengukuran yang baik. Jarak ini dapat juga dihitung dari data yang tidak dinormalisasi.<br />
-Rumus :<br />
-$<span class="math notranslate nohighlight">\(d_{chord}=\Bigg(2-2\frac{\sum_{i=1}^{n}x_iy_i}{||x||_2||y||_2}\Bigg)^{1/2}\)</span><span class="math notranslate nohighlight">\(\
-diman \)</span>||x||_2<span class="math notranslate nohighlight">\( adalah \)</span>L^{2}-norn||x||<em>2 = \sqrt\sum</em>{i=1}^{n}x_i^{2}$</p></li>
-<li><p><strong>Mahalanobis distance</strong><br />
-Mahalanobis distance dapat digunakan untuk mengekstraksi hyperellipsoidal clusters dan dapat mengurangi distorsi yang disebabkan oleh korelasi linier antara fitur dengan menerapkan transformasi pemutihan ke data atau dengan menggunakan kuadrat Jarak mahalanobis.<br />
-Rumus :<br />
-$<span class="math notranslate nohighlight">\(d_{mah}=\sqrt(x-y)S^{-1}(x-y)^{T}\)</span>$<br />
-diman S adalah matrik covariance data</p></li>
-<li><p><strong>Cosine measure</strong><br />
-Ukuran Cosine similarity lebih banyak digunakan dalam similaritas dokumen.<br />
-Rumus :<br />
-$<span class="math notranslate nohighlight">\(Cosine(x,y)=\frac{\sum_{i=1}^{n}x_iy_i}{||x||_2||y||_2}\)</span><span class="math notranslate nohighlight">\(\
-dimana \)</span>||y||_2<span class="math notranslate nohighlight">\( adalah Euclidean norm dari vektor \)</span>y=(y_1,y_2,…,y_n)<span class="math notranslate nohighlight">\( didefinisikan dengan \)</span>||y||_2=\sqrt y_1^2 + y_2^2 + … + y_n^2$</p></li>
-<li><p><strong>Pearson correlation</strong><br />
-Pearson correlation banyak digunakan dalam data expresi gen. Ukuran similaritas ini menghitung similaritas antara duan bentuk pola expresi gen.<br />
-Rumus :<br />
-$<span class="math notranslate nohighlight">\(Pearson(x,y)=\frac{\sum_{i=1}^{n}(xᵢ-μₓ)(yᵢ-μ_y)}{\sqrt\sum_{i=1}^{n}(xᵢ-yᵢ)^{2}\sqrt\sum_{i=1}^{n}(xᵢ-yᵢ)^{2}}\)</span>$</p></li>
+$<span class="math notranslate nohighlight">\( dist=\sqrt{\sum_{k=1}^n (p_k - q_k)} \)</span>$</p></li>
 </ol>
 <p><strong>TUGAS</strong></p>
 <p>Carilah data bisa ambil data dari kaggle atau github<br />
@@ -507,7 +477,7 @@ yaitu untuk melakukan perhitungan secara matematika dan mendefinisikan fungsi ma
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-7d6de5ee-af1e-424b-8339-9f81f150f6a2">
+  <div id="df-384fd4a9-346c-4aab-a659-6af01b930395">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -663,7 +633,7 @@ yaitu untuk melakukan perhitungan secara matematika dan mendefinisikan fungsi ma
 </table>
 <p>924 rows × 8 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-7d6de5ee-af1e-424b-8339-9f81f150f6a2')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-384fd4a9-346c-4aab-a659-6af01b930395')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -714,12 +684,12 @@ yaitu untuk melakukan perhitungan secara matematika dan mendefinisikan fungsi ma
 
       <script>
         const buttonEl =
-          document.querySelector('#df-7d6de5ee-af1e-424b-8339-9f81f150f6a2 button.colab-df-convert');
+          document.querySelector('#df-384fd4a9-346c-4aab-a659-6af01b930395 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-7d6de5ee-af1e-424b-8339-9f81f150f6a2');
+          const element = document.querySelector('#df-384fd4a9-346c-4aab-a659-6af01b930395');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -823,7 +793,7 @@ n = Implementasi ukuran jarak Minkowski pada model clustering data atribut dilak
 </div>
 </div>
 <p>Rumus Euclidean distance :<br />
-$<span class="math notranslate nohighlight">\(d=\sqrt(x_2-x_1)^{2}(y_2-y_1)^{2}\)</span>$</p>
+$<span class="math notranslate nohighlight">\( dist=\sqrt{\sum_{k=1}^n (p_k - q_k)} \)</span>$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Euclidean distance</span>
