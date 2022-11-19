@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Studi Kasus Dataset Credit Score (Tugas 7) &#8212; M. Ali Ghufron</title>
+    <title>Random Forest Classifier (Tugas 9) &#8212; M. Ali Ghufron</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Dataset arff messidor_features (Tugas 8)" href="notebooks9.html" />
-    <link rel="prev" title="UTS (klasifikasi implementasi kkn dan pohon keputusan)" href="notebooks7.html" />
+    <link rel="next" title="Save dan Load Model Dataset Kredit Score (Tugas 10)" href="notebooks11.html" />
+    <link rel="prev" title="Dataset arff messidor_features (Tugas 8)" href="notebooks9.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -154,8 +154,8 @@ const thebe_selector_output = ".output, .cell_output"
    UTS (klasifikasi implementasi kkn dan pohon keputusan)
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks8.html">
    Studi Kasus Dataset Credit Score (Tugas 7)
   </a>
  </li>
@@ -164,8 +164,8 @@ const thebe_selector_output = ".output, .cell_output"
    Dataset arff messidor_features (Tugas 8)
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="notebooks10.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Random Forest Classifier (Tugas 9)
   </a>
  </li>
@@ -238,7 +238,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://colab.research.google.com/github/AliGhufron-28/datamaining/blob/gh-pages/_sources/notebooks8.ipynb"
+        <a href="https://colab.research.google.com/github/AliGhufron-28/datamaining/blob/gh-pages/_sources/notebooks10.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -298,7 +298,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/AliGhufron-28/datamaining/issues/new?title=Issue%20on%20page%20%2Fnotebooks8.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/AliGhufron-28/datamaining/issues/new?title=Issue%20on%20page%20%2Fnotebooks10.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -326,7 +326,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/notebooks8.ipynb"
+        <a href="_sources/notebooks10.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -390,21 +390,6 @@ title="Print to PDF"
    Tahap Preprocessing Data
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#naive-bayes">
-   Naive Bayes
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#knn-algorithm">
-   KNN Algorithm
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#decision-tree">
-   Decision Tree
-  </a>
- </li>
 </ul>
 
     </nav>
@@ -414,7 +399,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Studi Kasus Dataset Credit Score (Tugas 7)</h1>
+                <h1>Random Forest Classifier (Tugas 9)</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -429,21 +414,6 @@ title="Print to PDF"
    Tahap Preprocessing Data
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#naive-bayes">
-   Naive Bayes
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#knn-algorithm">
-   KNN Algorithm
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#decision-tree">
-   Decision Tree
-  </a>
- </li>
 </ul>
 
                         </nav>
@@ -454,8 +424,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="studi-kasus-dataset-credit-score-tugas-7">
-<h1>Studi Kasus Dataset Credit Score (Tugas 7)<a class="headerlink" href="#studi-kasus-dataset-credit-score-tugas-7" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="random-forest-classifier-tugas-9">
+<h1>Random Forest Classifier (Tugas 9)<a class="headerlink" href="#random-forest-classifier-tugas-9" title="Permalink to this headline">#</a></h1>
 <section id="tahap-preprocessing-data">
 <h2>Tahap Preprocessing Data<a class="headerlink" href="#tahap-preprocessing-data" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
@@ -482,7 +452,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-d31f1d84-32d4-4776-a723-dae0e38cc77c">
+  <div id="df-cc7e65e1-48d8-4285-ba62-8a41bd101c28">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -571,7 +541,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-d31f1d84-32d4-4776-a723-dae0e38cc77c')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-cc7e65e1-48d8-4285-ba62-8a41bd101c28')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -622,12 +592,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-d31f1d84-32d4-4776-a723-dae0e38cc77c button.colab-df-convert');
+          document.querySelector('#df-cc7e65e1-48d8-4285-ba62-8a41bd101c28 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-d31f1d84-32d4-4776-a723-dae0e38cc77c');
+          const element = document.querySelector('#df-cc7e65e1-48d8-4285-ba62-8a41bd101c28');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -657,7 +627,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-907a0785-b1c2-4607-b3fc-7bc83f535211">
+  <div id="df-ecb7a6af-a070-4d85-9a7f-2c68956fdb7a">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -728,7 +698,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-907a0785-b1c2-4607-b3fc-7bc83f535211')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-ecb7a6af-a070-4d85-9a7f-2c68956fdb7a')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -779,12 +749,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-907a0785-b1c2-4607-b3fc-7bc83f535211 button.colab-df-convert');
+          document.querySelector('#df-ecb7a6af-a070-4d85-9a7f-2c68956fdb7a button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-907a0785-b1c2-4607-b3fc-7bc83f535211');
+          const element = document.querySelector('#df-ecb7a6af-a070-4d85-9a7f-2c68956fdb7a');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -814,7 +784,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-765399e9-f4a9-4da8-a177-659e5112d4a0">
+  <div id="df-7d6ddbc5-6d80-44c4-b5cf-763f68f4a5a2">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -885,7 +855,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-765399e9-f4a9-4da8-a177-659e5112d4a0')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-7d6ddbc5-6d80-44c4-b5cf-763f68f4a5a2')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -936,12 +906,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-765399e9-f4a9-4da8-a177-659e5112d4a0 button.colab-df-convert');
+          document.querySelector('#df-7d6ddbc5-6d80-44c4-b5cf-763f68f4a5a2 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-765399e9-f4a9-4da8-a177-659e5112d4a0');
+          const element = document.querySelector('#df-7d6ddbc5-6d80-44c4-b5cf-763f68f4a5a2');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -971,7 +941,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-13b1f037-f823-4469-a8e8-b553badeeca4">
+  <div id="df-2720734a-a7e0-4951-abaf-ef3aa2d68146">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1055,7 +1025,7 @@ title="Print to PDF"
 </table>
 <p>900 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-13b1f037-f823-4469-a8e8-b553badeeca4')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-2720734a-a7e0-4951-abaf-ef3aa2d68146')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1106,12 +1076,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-13b1f037-f823-4469-a8e8-b553badeeca4 button.colab-df-convert');
+          document.querySelector('#df-2720734a-a7e0-4951-abaf-ef3aa2d68146 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-13b1f037-f823-4469-a8e8-b553badeeca4');
+          const element = document.querySelector('#df-2720734a-a7e0-4951-abaf-ef3aa2d68146');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1141,7 +1111,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-c90e783a-7152-485c-897c-7a2b04e8ce6f">
+  <div id="df-12eff473-c35d-4de3-9821-52ced757df70">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1254,7 +1224,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-c90e783a-7152-485c-897c-7a2b04e8ce6f')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-12eff473-c35d-4de3-9821-52ced757df70')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1305,12 +1275,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-c90e783a-7152-485c-897c-7a2b04e8ce6f button.colab-df-convert');
+          document.querySelector('#df-12eff473-c35d-4de3-9821-52ced757df70 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-c90e783a-7152-485c-897c-7a2b04e8ce6f');
+          const element = document.querySelector('#df-12eff473-c35d-4de3-9821-52ced757df70');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1340,7 +1310,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-93bbceb8-a15f-443e-a3ba-53839a5090cd">
+  <div id="df-b3427b88-8e83-4908-b5cc-8e0f72b0999e">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1387,7 +1357,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-93bbceb8-a15f-443e-a3ba-53839a5090cd')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-b3427b88-8e83-4908-b5cc-8e0f72b0999e')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1438,12 +1408,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-93bbceb8-a15f-443e-a3ba-53839a5090cd button.colab-df-convert');
+          document.querySelector('#df-b3427b88-8e83-4908-b5cc-8e0f72b0999e button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-93bbceb8-a15f-443e-a3ba-53839a5090cd');
+          const element = document.querySelector('#df-b3427b88-8e83-4908-b5cc-8e0f72b0999e');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1480,7 +1450,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-a320ce2b-b372-45eb-b786-ccc27abf0e58">
+  <div id="df-e89d41ad-73ad-44f6-8463-a856c91a2c6a">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1684,7 +1654,7 @@ title="Print to PDF"
 </table>
 <p>900 rows × 12 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-a320ce2b-b372-45eb-b786-ccc27abf0e58')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-e89d41ad-73ad-44f6-8463-a856c91a2c6a')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1735,12 +1705,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-a320ce2b-b372-45eb-b786-ccc27abf0e58 button.colab-df-convert');
+          document.querySelector('#df-e89d41ad-73ad-44f6-8463-a856c91a2c6a button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-a320ce2b-b372-45eb-b786-ccc27abf0e58');
+          const element = document.querySelector('#df-e89d41ad-73ad-44f6-8463-a856c91a2c6a');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1781,7 +1751,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-2a6afa45-d655-4547-9f53-9038726decba">
+  <div id="df-189bf671-4f6d-4472-a75c-4b16cf1b04c6">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1877,7 +1847,7 @@ title="Print to PDF"
 </table>
 <p>900 rows × 3 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-2a6afa45-d655-4547-9f53-9038726decba')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-189bf671-4f6d-4472-a75c-4b16cf1b04c6')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1928,12 +1898,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-2a6afa45-d655-4547-9f53-9038726decba button.colab-df-convert');
+          document.querySelector('#df-189bf671-4f6d-4472-a75c-4b16cf1b04c6 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-2a6afa45-d655-4547-9f53-9038726decba');
+          const element = document.querySelector('#df-189bf671-4f6d-4472-a75c-4b16cf1b04c6');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1963,7 +1933,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-d97fc838-77cc-4753-b08b-66fec310c306">
+  <div id="df-2b04b48f-b6d4-48d1-8b6b-6dc78b375ad6">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2131,7 +2101,7 @@ title="Print to PDF"
 </table>
 <p>900 rows × 9 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-d97fc838-77cc-4753-b08b-66fec310c306')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-2b04b48f-b6d4-48d1-8b6b-6dc78b375ad6')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -2182,12 +2152,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-d97fc838-77cc-4753-b08b-66fec310c306 button.colab-df-convert');
+          document.querySelector('#df-2b04b48f-b6d4-48d1-8b6b-6dc78b375ad6 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-d97fc838-77cc-4753-b08b-66fec310c306');
+          const element = document.querySelector('#df-2b04b48f-b6d4-48d1-8b6b-6dc78b375ad6');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2217,7 +2187,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-c730f8ef-4a29-4229-9dce-37af7d257b16">
+  <div id="df-8309df5e-1328-4db7-8a9f-03fe65e5d8cb">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2421,7 +2391,7 @@ title="Print to PDF"
 </table>
 <p>900 rows × 12 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-c730f8ef-4a29-4229-9dce-37af7d257b16')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-8309df5e-1328-4db7-8a9f-03fe65e5d8cb')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -2472,12 +2442,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-c730f8ef-4a29-4229-9dce-37af7d257b16 button.colab-df-convert');
+          document.querySelector('#df-8309df5e-1328-4db7-8a9f-03fe65e5d8cb button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-c730f8ef-4a29-4229-9dce-37af7d257b16');
+          const element = document.querySelector('#df-8309df5e-1328-4db7-8a9f-03fe65e5d8cb');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2507,7 +2477,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-f010dff2-84ab-44f1-adf3-4eeff42cb951">
+  <div id="df-eac6fa14-5cfc-4662-a4d9-72f73781b13f">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2699,7 +2669,7 @@ title="Print to PDF"
 </table>
 <p>900 rows × 11 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-f010dff2-84ab-44f1-adf3-4eeff42cb951')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-eac6fa14-5cfc-4662-a4d9-72f73781b13f')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -2750,12 +2720,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-f010dff2-84ab-44f1-adf3-4eeff42cb951 button.colab-df-convert');
+          document.querySelector('#df-eac6fa14-5cfc-4662-a4d9-72f73781b13f button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-f010dff2-84ab-44f1-adf3-4eeff42cb951');
+          const element = document.querySelector('#df-eac6fa14-5cfc-4662-a4d9-72f73781b13f');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2785,7 +2755,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-4ef1dcca-1815-44ed-9c44-7615a9bdda70">
+  <div id="df-24883aa9-ef0d-422e-a53e-9c2ff2807793">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2989,7 +2959,7 @@ title="Print to PDF"
 </table>
 <p>900 rows × 12 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-4ef1dcca-1815-44ed-9c44-7615a9bdda70')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-24883aa9-ef0d-422e-a53e-9c2ff2807793')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -3040,12 +3010,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-4ef1dcca-1815-44ed-9c44-7615a9bdda70 button.colab-df-convert');
+          document.querySelector('#df-24883aa9-ef0d-422e-a53e-9c2ff2807793 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-4ef1dcca-1815-44ed-9c44-7615a9bdda70');
+          const element = document.querySelector('#df-24883aa9-ef0d-422e-a53e-9c2ff2807793');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -3066,9 +3036,6 @@ title="Print to PDF"
   </div>
 </div></div>
 </div>
-</section>
-<section id="naive-bayes">
-<h2>Naive Bayes<a class="headerlink" href="#naive-bayes" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">make_scorer</span><span class="p">,</span> <span class="n">accuracy_score</span><span class="p">,</span><span class="n">precision_score</span>
@@ -3077,6 +3044,8 @@ title="Print to PDF"
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">KFold</span><span class="p">,</span><span class="n">train_test_split</span><span class="p">,</span><span class="n">cross_val_score</span>
 <span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span>
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_classification</span>
 </pre></div>
 </div>
 </div>
@@ -3098,8 +3067,22 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gaussian</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
-<span class="n">gaussian</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">make_scorer</span><span class="p">,</span> <span class="n">accuracy_score</span><span class="p">,</span><span class="n">precision_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span> <span class="p">,</span><span class="n">precision_score</span><span class="p">,</span><span class="n">recall_score</span><span class="p">,</span><span class="n">f1_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">KFold</span><span class="p">,</span><span class="n">train_test_split</span><span class="p">,</span><span class="n">cross_val_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">clf</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
 <span class="n">Y_pred</span> <span class="o">=</span> <span class="n">gaussian</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span> 
 <span class="n">accuracy_nb</span><span class="o">=</span><span class="nb">round</span><span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">Y_pred</span><span class="p">)</span><span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 <span class="n">acc_gaussian</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">gaussian</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
@@ -3109,102 +3092,26 @@ title="Print to PDF"
 <span class="n">precision</span> <span class="o">=</span><span class="n">precision_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">Y_pred</span><span class="p">,</span><span class="n">average</span><span class="o">=</span><span class="s1">&#39;micro&#39;</span><span class="p">)</span>
 <span class="n">recall</span> <span class="o">=</span>  <span class="n">recall_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">Y_pred</span><span class="p">,</span><span class="n">average</span><span class="o">=</span><span class="s1">&#39;micro&#39;</span><span class="p">)</span>
 <span class="n">f1</span> <span class="o">=</span> <span class="n">f1_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">Y_pred</span><span class="p">,</span><span class="n">average</span><span class="o">=</span><span class="s1">&#39;micro&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Confusion matrix for Naive Bayes</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">cm</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;accuracy_Naive Bayes: </span><span class="si">%.3f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="k">accuracy</span>)
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;precision_Naive Bayes: </span><span class="si">%.3f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="k">precision</span>)
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;recall_Naive Bayes: </span><span class="si">%.3f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="k">recall</span>)
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;f1-score_Naive Bayes : </span><span class="si">%.3f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="k">f1</span>)
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Confusion matrix for randomForest</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">cm</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;accuracy_randomForest: </span><span class="si">%.3f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="k">accuracy</span>)
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;precision_randomForest: </span><span class="si">%.3f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="k">precision</span>)
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;recall_randomForest: </span><span class="si">%.3f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="k">recall</span>)
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;f1-score_randomForest : </span><span class="si">%.3f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="k">f1</span>)
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Confusion matrix for Naive Bayes
- [[69  0  0  0  0]
- [ 0 49  0  0  0]
- [ 0  0 84  0  0]
- [ 0  0  0 36  0]
- [ 0  0  0  0 32]]
-accuracy_Naive Bayes: 1.000
-precision_Naive Bayes: 1.000
-recall_Naive Bayes: 1.000
-f1-score_Naive Bayes : 1.000
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="knn-algorithm">
-<h2>KNN Algorithm<a class="headerlink" href="#knn-algorithm" title="Permalink to this headline">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
-<span class="n">neigh</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">neigh</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">NameError</span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">21</span><span class="o">-</span><span class="mi">2</span><span class="n">a6ff092c863</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">Y_pred</span> <span class="o">=</span> <span class="n">gaussian</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">accuracy_nb</span><span class="o">=</span><span class="nb">round</span><span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">Y_pred</span><span class="p">)</span><span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">acc_gaussian</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">gaussian</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 
-<span class="n">acc_knn</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">neigh</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accuracy_KNN :&quot;</span><span class="p">,</span><span class="n">acc_knn</span><span class="p">)</span>
+<span class="ne">NameError</span>: name &#39;gaussian&#39; is not defined
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Accuracy_KNN : 100.0
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="decision-tree">
-<h2>Decision Tree<a class="headerlink" href="#decision-tree" title="Permalink to this headline">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
-<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">tree</span>
-<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span>
-<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menghitung akurasi dengan menggunakan gini indek</span>
-<span class="n">clf</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">criterion</span><span class="o">=</span><span class="s2">&quot;gini&quot;</span><span class="p">)</span>
-<span class="n">clf</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
-
-<span class="n">y_pred</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accuracy_Decision Tree :&quot;</span><span class="p">,</span><span class="n">metrics</span><span class="o">.</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_pred</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Accuracy_Decision Tree : 1.0
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># gambar bentuk decision tree</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">15</span><span class="p">))</span>
-<span class="c1">#create the tree plot</span>
-<span class="n">a</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">plot_tree</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span>
-                   <span class="n">rounded</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-                   <span class="n">filled</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-                   <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
-<span class="c1">#show the plot</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/notebooks8_29_0.png" src="_images/notebooks8_29_0.png" />
 </div>
 </div>
 </section>
@@ -3237,17 +3144,17 @@ f1-score_Naive Bayes : 1.000
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="notebooks7.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="notebooks9.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">UTS (klasifikasi implementasi kkn dan pohon keputusan)</p>
+            <p class="prev-next-title">Dataset arff messidor_features (Tugas 8)</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="notebooks9.html" title="next page">
+    <a class='right-next' id="next-link" href="notebooks11.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Dataset arff messidor_features (Tugas 8)</p>
+        <p class="prev-next-title">Save dan Load Model Dataset Kredit Score (Tugas 10)</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
